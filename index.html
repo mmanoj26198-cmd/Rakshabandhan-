@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Choti Raj Kumari Shakshi 👑</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#c77dff,#ff9ed2);
+overflow-x:hidden;
+color:white;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.photo{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+border:8px solid gold;
+box-shadow:0 0 35px gold;
+margin-bottom:20px;
+}
+
+h1{
+font-size:3rem;
+text-shadow:0 0 20px gold;
+}
+
+h2{
+margin-top:10px;
+font-size:1.4rem;
+}
+
+.btn{
+margin-top:25px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:white;
+color:#b04cff;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.card{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:25px;
+}
+
+.gift{
+font-size:120px;
+cursor:pointer;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-15px);
+}
+}
+
+.message{
+display:none;
+font-size:1.2rem;
+margin-top:20px;
+line-height:1.8;
+}
+
+.heart{
+position:fixed;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+from{
+transform:translateY(-100px);
+}
+to{
+transform:translateY(110vh);
+}
+}
+
+.footer{
+text-align:center;
+padding:30px;
+font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<img src="shakshi.jpg" class="photo">
+
+<h1>👑 My Choti Raj Kumari 👑</h1>
+
+<h2>Shakshi ❤️</h2>
+
+<br>
+
+<p>
+Har rajkumari ke paas ek taaj hota hai,
+meri Choti Raj Kumari ka taaj uski muskaan hai ✨
+</p>
+
+<button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+Open Surprise 🎁
+</button>
+
+</div>
+
+<section class="section" id="letter">
+
+<div class="card">
+
+<h1>💌 Mere Dil Se</h1>
+
+<br>
+
+<p style="font-size:20px;line-height:2;">
+
+Meri Pyari Choti Raj Kumari Shakshi 👑
+
+<br><br>
+
+Tum meri life ki sabse special behan ho.
+
+Jab tum hasta ho to ghar aur bhi zyada khush lagta hai.
+
+Chahe hum kitni bhi masti karein ya kabhi-kabhi lad lein,
+tum hamesha meri favourite rahogi.
+
+<br><br>
+
+Main dua karta hoon ki tumhari zindagi hamesha
+khushiyon, safalta aur pyari-pyari muskaanon se bhari rahe.
+
+<br><br>
+
+❤️ Happy Raksha Bandhan ❤️
+
+<br><br>
+
+Love You Forever
+
+<br>
+
+— Tumhara Bhai 💜
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h1>🏆 Best Choti Raj Kumari Award 🏆</h1>
+
+<br>
+
+<p style="font-size:22px;line-height:2;">
+
+Awarded To:
+
+<br>
+
+👑 SHAKSHI 👑
+
+<br><br>
+
+For Being:
+
+<br>
+
+🌸 Cute
+
+<br>
+
+😂 Funny
+
+<br>
+
+❤️ Caring
+
+<br>
+
+🎀 Sweet
+
+<br>
+
+👑 World's Best Little Sister
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h1>🎁 Click Your Gift</h1>
+
+<br>
+
+<div class="gift" onclick="openGift()">
+🎁
+</div>
+
+<div class="message" id="giftMessage">
+
+🎆 SURPRISE 🎆
+
+<br><br>
+
+Happy Raksha Bandhan Meri Choti Raj Kumari!
+
+<br><br>
+
+Tum meri zindagi ka ek bahut important hissa ho.
+
+Main hamesha tumhare saath rahunga.
+
+<br><br>
+
+👑💜🎀❤️✨
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+Made With ❤️ For Shakshi
+</div>
+
+<script>
+
+function openGift(){
+document.getElementById("giftMessage").style.display="block";
+}
+
+for(let i=0;i<60;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=Math.random()>0.5 ? "💜" : "❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+heart.style.animationDuration=(4+Math.random()*6)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
